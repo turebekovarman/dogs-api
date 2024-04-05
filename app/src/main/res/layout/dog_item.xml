@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/tag_img"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/tag_icon"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="name"
+        android:layout_marginStart="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="@id/tag_img"
+        app:layout_constraintBottom_toBottomOf="@id/tag_img"
+        app:layout_constraintStart_toEndOf="@id/tag_img"/>
+
+    <LinearLayout
+        android:id="@+id/coat_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="12dp"
+        app:layout_constraintEnd_toStartOf="@id/energy_view"
+        app:layout_constraintTop_toBottomOf="@id/dog_img">
+
+        <ImageView
+            android:id="@+id/coat_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/coat_icon"
+            android:layout_marginStart="4dp" />
+
+        <TextView
+            android:id="@+id/coat"
+            android:layout_marginStart="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/energy_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/coat_view"
+        app:layout_constraintTop_toTopOf="@id/coat_view"
+        app:layout_constraintEnd_toStartOf="@id/gwc_view">
+
+        <ImageView
+            android:id="@+id/energy_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/energy_icon"/>
+
+        <TextView
+            android:id="@+id/energy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/gwc_view"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/energy_view"
+        app:layout_constraintTop_toTopOf="@id/energy_view"
+        app:layout_constraintEnd_toStartOf="@id/grooming_view">
+
+        <ImageView
+            android:id="@+id/gwc_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/gwc_icon"
+            app:layout_constraintTop_toTopOf="@id/coat"
+            app:layout_constraintEnd_toStartOf="@id/gwc"
+            app:layout_constraintStart_toEndOf="@id/energy"/>
+        <TextView
+            android:id="@+id/gwc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/grooming_img"
+            app:layout_constraintTop_toTopOf="@id/coat"
+            app:layout_constraintStart_toEndOf="@id/gwc_img"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/grooming_view"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/gwc_view"
+        app:layout_constraintTop_toTopOf="@id/gwc_view"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ImageView
+            android:id="@+id/grooming_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/grooming_icon"
+            app:layout_constraintEnd_toStartOf="@id/grooming"
+            app:layout_constraintTop_toTopOf="@id/coat"
+            app:layout_constraintStart_toEndOf="@id/gwc"/>
+
+        <TextView
+            android:id="@+id/grooming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/coat"
+            app:layout_constraintStart_toEndOf="@id/grooming_img"/>
+
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:id="@+id/dog_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="12dp"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
